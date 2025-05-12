@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Admin - Blog Teste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Painel Admin</h1>
+    <button id="toggle-theme">🌙</button>
+  </header>
+
+  <section id="login-section">
+    <h3>Login</h3>
+    <input id="user" placeholder="Usuário" />
+    <input id="pass" type="password" placeholder="Senha" />
+    <button onclick="login()">Entrar</button>
+  </section>
+
+  <section id="admin-panel" style="display:none;">
+    <h2>Criar Postagem</h2>
+    <input id="titulo" placeholder="Título do Post" />
+    <textarea id="conteudo" placeholder="Conteúdo do post..."></textarea>
+    <button onclick="criarPost()">Postar</button>
+
+    <h2>Postagens</h2>
+    <div id="lista-posts"></div>
+
+    <h2>Modo Manutenção</h2>
+    <button onclick="alternarManutencao()">Ativar/Desativar</button>
+  </section>
+
+  <script src="theme-toggle.js"></script>
+  <script src="login.js"></script>
+  <script src="blog.js"></script>
+  <script src="maintenance.js"></script>
+</body>
+</html>
